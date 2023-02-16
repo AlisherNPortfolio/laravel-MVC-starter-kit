@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Classes\UploadImage\ModelUploader;
 use App\Helpers\MessageHelper;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -11,7 +12,9 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasRoles;
+    use Notifiable, HasRoles, ModelUploader;
+
+    public $file_name = 'avatar';
 
     /**
      * The attributes that are mass assignable.

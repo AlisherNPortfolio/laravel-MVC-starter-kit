@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('admin')->namespace('Admin')->group(static function() {
+Route::prefix('admin')->namespace('Admin')->group(static function () {
     Route::middleware('guest')->group(static function () {
         // Login
         Route::match(['get', 'post'], 'sign-in', 'Auth\SignController@login')->name('sign-in');
         // Sign up
-//    Route::match(['get', 'post'], 'sign-up', [SignController::class, 'sign_up'])->name('sign-up');
+        //    Route::match(['get', 'post'], 'sign-up', [SignController::class, 'sign_up'])->name('sign-up');
     });
     Route::middleware('auth')->group(function () {
         Route::post('log-out', 'Auth\SignController@logout')->name('log-out');
@@ -36,7 +36,7 @@ Route::prefix('admin')->namespace('Admin')->group(static function() {
         // Roles
         Route::resource('role', 'RoleController');
         // Permissions
-        Route::resource('permissions','PermissionController');
+        Route::resource('permissions', 'PermissionController');
         // Static Translations
         Route::resource('static-translations', 'StaticTranslationController');
         // Static Translations Search DropDown
@@ -48,19 +48,17 @@ Route::prefix('admin')->namespace('Admin')->group(static function() {
 
 
 
-//    Route::middleware('auth')->group(static function () {
-//        // Logout
-//
-//    });
+    //    Route::middleware('auth')->group(static function () {
+    //        // Logout
+    //
+    //    });
     // Tests
-    Route::get('test', 'TestController@test');
-    Route::get('drag-drop', 'TestController@drag_drop');
+    // Route::get('test', 'TestController@test');
+    // Route::get('drag-drop', 'TestController@drag_drop');
     // Documentation
     Route::get('/doc/{viewName}', 'DocumentationController@index');
     // File Manager
     Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], static function () {
         \UniSharp\LaravelFilemanager\Lfm::routes();
     });
-
-
 });
