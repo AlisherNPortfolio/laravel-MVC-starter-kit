@@ -50,7 +50,7 @@
                                 <td>  <span class="name">{{ $role->name }}</span> </td>
                                 <td> <span class="product">{{ $role->guard_name }}</span> </td>
                                 <td>
-                                    @include('admin.layouts.components.crud',['link' =>'role/' . $role->id, 'actions' => ['all']])
+                                    {{-- @include('admin.layouts.components.crud',['link' =>'role/' . $role->id, 'actions' => ['all']]) --}}
                                     <x-crud link="role/{{ $role->id }}" :actions="['all']"></x-crud>
                                 </td>
                             </tr>
