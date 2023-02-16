@@ -32,7 +32,7 @@
             <div class="card">
                 <div class="card-header">
                     <strong class="card-title">Roles</strong>
-                    @include('admin.layouts.components.notifications')
+                    @include('admin.layouts.components.notifier')
                 </div>
                 <div class="table-stats order-table ov-h">
                     <table class="table ">
