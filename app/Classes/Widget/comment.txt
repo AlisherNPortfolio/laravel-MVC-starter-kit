@@ -1,0 +1,4 @@
+Widget @include bilan ishlatilgan view qismlari uchun yaratilyapti.
+Keyinroq davom ettiriladi
+
+CKEDITOR javascript kodlari va resursi ham yuklanishi kerak!

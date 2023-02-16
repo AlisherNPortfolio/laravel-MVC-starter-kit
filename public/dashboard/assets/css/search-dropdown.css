@@ -1,0 +1,21 @@
+.search__dropdown {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: fixed;
+    display: none;
+}
+
+.search__dropdown ul {
+    list-style: none;
+    margin: 0;
+}
+
+.search__dropdown ul li.search__dropdown-item {
+    padding: 3px 5px;
+}
+.search__dropdown ul li.search__dropdown-item:nth-child(2n+1) {
+    background-color: #e4eaee;
+}
+.search__dropdown ul li.search__dropdown-item:hover {
+ background-color: #e2e2e2;
+}

@@ -1,0 +1,23 @@
+.btn-danger-hover:hover {
+    color: #212529;
+    text-decoration: none;
+    background-color: #7a1e28;
+}
+#languages {
+    position: relative;
+}
+
+#languages img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -13px;
+}
+.dropdown.language-selector .dropdown-menu {
+    left: -29px !important;
+    min-width: initial!important;
+    padding: 0!important;
+}
+.dropdown.language-selector .dropdown-menu .dropdown-item {
+    padding: 10px 15px!important;
+}
